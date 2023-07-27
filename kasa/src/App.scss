@@ -1,0 +1,66 @@
+@import "./variableSass/variables.scss";
+@import "../src/pages/home.scss";
+@import "../src/components/main.scss";
+@import "../src/components/footer.scss";
+
+body {
+  box-sizing: border-box;
+  font-family: $mainFont;
+}
+
+.nav-container {
+  margin: 45px 45px; /* Metodo migliore?? inserisco in variabile? */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  text-align: right;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34.224px;
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 57px;
+    .link {
+      
+      text-decoration: none;
+      color: $mainColor;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.error-page{
+  color: $mainColor;
+
+  h1{
+    font-size: 288px;
+    margin: 0;
+    margin-top:40px;
+  }
+  p{
+    font-size: 36px;
+font-style: normal;
+font-weight: 500;
+  }
+  &_text{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 79px;
+  }
+
+  &_link{
+    color: $mainColor;
+  }
+}
+

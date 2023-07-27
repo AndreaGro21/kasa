@@ -1,0 +1,20 @@
+@import "../variableSass/variables.scss";
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 45px;
+}
+.banner-container {
+  max-width: 1240px;
+  padding: 2% 19%;
+  background-image: url(../assets/bannerhome.png);
+  background-size: cover;
+  text-align: center;
+  color: #fff;  
+  font-size: 48px;
+  font-style: normal;
+  border-radius: 25px;
+  text-shadow: 0 0 25px black;
+
+}
