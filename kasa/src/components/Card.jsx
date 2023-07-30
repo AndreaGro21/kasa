@@ -6,6 +6,14 @@ function Card() {
 
   const [data, setData] = useState([]);
 
+function openCard(){/* SE LA CART è CHIUSA(FALSE)APRI CART  */
+
+  console.log("jhooJDPA")
+}
+
+
+
+
   const getData = () => {
     fetch('data.json'
       , {
@@ -30,7 +38,7 @@ function Card() {
     <div className="main-container">
       
         {data.map((arrayData) => (
-          <div key={`${arrayData.id}`} className="main-container_details"> 
+          <div key={`${arrayData.id}`} className="main-container_details" onClick={openCard}> 
             <img key={`${arrayData}`} src={arrayData.cover} alt={`${arrayData.title}`} className="image-card"/>
             <p key={`${arrayData.title}`}>{arrayData.title}</p>
           </div>

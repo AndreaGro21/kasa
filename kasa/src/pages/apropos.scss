@@ -1,0 +1,95 @@
+
+ul{
+
+margin: auto;
+  
+  .collapse-handler{
+    color: #fff;
+    max-width: 80%;
+    background: $mainColor;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  
+}
+
+
+.collapse-text{
+position: relative;
+top: -5px;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+    background: #f6f6f6;
+    color: $mainColor;
+    padding: 10px 0;
+    margin: 0 0 10px 0;
+    z-index: -1;
+}
+.collapse-text[showtext ="1"]{
+
+    animation: showtext 1s 1;
+}
+
+@keyframes showtext {
+    25% {
+        transform: rotate(15deg);
+      }
+      50% {
+        transform: rotate(-30deg);
+      }
+      75% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+
+}
+
+.apropos-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .collapse-handler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:$mainColor;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .collapse-handler i {
+    font-size: 16px;
+  }
+  
+  .collapse-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .collapse-text.visible {
+    max-height: 500px; /* Adjust this value based on your content's height */
+    opacity: 1;
+    padding: 10px;
+  }
+
+  
+  
+  
+  
+  
