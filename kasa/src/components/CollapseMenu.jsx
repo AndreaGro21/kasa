@@ -39,7 +39,7 @@ function CollapseMenu() {
 
     setShowText((prevState) => {
       const newState = [...prevState];
-      newState[index] = newState[index] === 0 ? 1 : 0; // Toggle the value between 0 and 1
+      newState[index] = newState[index] === 0 ? 1 : 0; 
       return newState;
     });
   };

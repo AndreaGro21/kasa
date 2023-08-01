@@ -1,14 +1,15 @@
 import React from "react"
 import Banner from "../components/Banner"
 import CollapseMenu from "../components/CollapseMenu"
+import BannerImg from "../assets/bannerApropos.png"
 function Apropos() {
 
     return (
-        <div>
-            <Banner />
-            <CollapseMenu 
-            title ={"Flabilité"} 
+        <div className="apropos-home">
+            <Banner 
+            titleBanner={""} background={BannerImg}
             />
+            <CollapseMenu />
         </div>
     )
 }

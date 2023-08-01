@@ -1,55 +1,56 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import Data from "./Data";
 
 function Card() {
+    const fetchedData = Data();
+    console.log(fetchedData)
+    return (
+        <div className="card-container">
+            {fetchedData.map((arrayData) => (
+                <div key={`${arrayData.id}`} className="card_details" >
+                    <img key={`${arrayData}`} src={arrayData.cover} alt={`${arrayData.title}`} className="banner-card" />
+                    <h2 key={`${arrayData.title}`}>{arrayData.title}</h2>
+                    <p> {arrayData.location}</p>
+                    <div>{arrayData.tags.map((tags) => (
+                        <button key={`${tags}`}>{tags}</button>
+                    ))}
+                    </div>
+                    <button
+                        className="collapse-handler"
+                        /* onClick={} */>
+                        Équipments
+                        <i className={'fa-solid fa-chevron-up'}></i>
+                    </button>
+                    <div>
+                        <ul key={arrayData.equipments}>
+                            {arrayData.equipments.map((listEquip) => (
+                                <li key={listEquip}>{listEquip}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <button
+                        className="collapse-handler"
+                    /* onClick={} */>
+                        Description
+                        <i className={'fa-solid fa-chevron-up'}></i>
+                    </button>
+                    <p>{arrayData.description}</p>
+                    {/* <div>{arrayData.find(hostProfile => {
+                        return(<div>
+                            <div> {hostProfile.name}</div>
+                            <div> {hostProfile.picture}</div>
+                        </div>
+                    )})}
+                    </div> */}
 
 
-  const [data, setData] = useState([]);
 
-function openCard(){/* SE LA CART è CHIUSA(FALSE)APRI CART  */
+                </div>
 
-  console.log("jhooJDPA")
-}
-
-
-
-
-  const getData = () => {
-    fetch('data.json'
-      , {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
+            )
+            )
+            }
+        </div>
     )
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        console.log(myJson);
-        setData(myJson)
-      });
-  }
-  useEffect(() => {
-    getData()
-  }, [])
-  return (
-    <div className="main-container">
-      
-        {data.map((arrayData) => (
-          <div key={`${arrayData.id}`} className="main-container_details" onClick={openCard}> 
-            <img key={`${arrayData}`} src={arrayData.cover} alt={`${arrayData.title}`} className="image-card"/>
-            <p key={`${arrayData.title}`}>{arrayData.title}</p>
-          </div>
-        )
-        )
-        }
-    </div>
-  );
 }
-
 export default Card
-
-/* RECUPERARE L'ARRAY E CREARE UN MODO PER STOCCARE I VALORI DA INSEIRE POI NELLE CARTE? */
-/* O INSERIRE E CREARE LE CARTE DIRETTAMENTE */

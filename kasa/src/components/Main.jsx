@@ -1,19 +1,12 @@
-
 import React from 'react'
-
-import Card from './Card'
-
-
-
-
-
+import Gallery from './Gallery'
 
 function Main() {
-return(
-<div className='main-page'> 
-<Card />
-    </div>
-)
+    return (
+        <div className='main-page'>
+            <Gallery />
+        </div>
+    )
 };
 
 export default Main
