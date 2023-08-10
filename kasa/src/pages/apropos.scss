@@ -1,56 +1,40 @@
 .apropos-home{
   margin: 0 45px;
-
 }
   .collapse-handler{
-    color: #fff;
-    background: $mainColor;
-    border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    border: none;
     padding: 15px;
-    width: 100%;
-   
-
+    background: $mainColor;
+    color: #fff;
+    border-radius: 10px;
     cursor: pointer;
   }
 .apropos-list {
-    list-style: none;
-    padding: 0;
-    margin:0 10%;
-    margin-top: 5%;
-    li{
-      margin-bottom: -15px;
-    }
+    margin: 2% 10%;
   }
-  
-  
+
   .collapse-text {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out, opacity 0.3s ease, margin 0.2 ease-in-out;
-    color: $mainColor;
-    font-weight: 200;
-    background: #f6f6f6;
-    padding: 25px;
     position: relative;
-    top: -10px;
-    z-index: -1;
-    margin: 0;
+margin: 2% 10%;
+    opacity: 0;
+    color: $mainColor;
+    background: #f6f6f6;
+    padding: 15px;
+    transform: translateY(-10px);
+
   }
-  
-  .collapse-text.visible {
-    max-height: 200px; 
+  .collapse-text.visible { 
     opacity: 1;
-    margin-bottom: 15px;
+
+    ul{
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 142.6%;
+      list-style-type: none;
+    }
   }
 
   

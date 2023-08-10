@@ -3,14 +3,14 @@
 @import "../src/pages/apropos.scss";
 @import "../src/components/main.scss";
 @import "../src/components/footer.scss";
-@import "../src/components/card.scss";
+
 body {
   box-sizing: border-box;
   font-family: $mainFont;
 }
 
 .nav-container {
-  margin: 45px 45px; /* Metodo migliore?? inserisco in variabile? */
+  margin: 45px 6.5%; /* Metodo migliore?? inserisco in variabile? */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,10 +22,8 @@ body {
   line-height: 34.224px;
   .nav-menu {
     display: flex;
-    justify-content: space-between;
-    gap: 57px;
+    width: 20%;;
     .link {
-      
       text-decoration: none;
       color: $mainColor;
       &:hover {
