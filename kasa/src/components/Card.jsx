@@ -1,26 +1,22 @@
 import React from "react";
-import Data from "./Data";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import CollapseMenu from "./CollapseMenu";
 import Slider from "./Slider";
-function Card() {
-    const fetchedData = Data();
-    const { logementId } = useParams()
-    const selectedData = fetchedData.find(item => item.id === logementId);
+
+function Card({ Data }) {
+    const { logementId } = useParams();
+    const selectedData = Data.find(item => item.id === logementId);
     if (selectedData) {
         return (
-            <div className="card-container" key={fetchedData.id}>
-                {console.log(selectedData)}
-                <div to={`/logements/${selectedData}`} className="card_details" >
-                    <Slider imagesList={logementId} />
+            <div className="card-container" key={logementId}>
+                <Link to={`/logements/${logementId}`} className="card_details" >
+                    <Slider imagesList={selectedData.images} Data={Data} />
                     <div className="profile-info">
                         <div className="profile-info_title">
                             <h2>{selectedData.title}</h2>
                             <p>{selectedData.location}</p>
                             {selectedData.tags.map((tag, index) => (
-                                <button key={index}>
-                                    {tag}
-                                </button>
+                                <button key={index}>{tag}</button>
                             ))}
                         </div>
                         <div className="profile-container">
@@ -28,7 +24,7 @@ function Card() {
                             <img
                                 src={selectedData.host.picture}
                                 className="picture-profile"
-                                alt={`photo of:${selectedData.host.name} `}
+                                alt={`photo of: ${selectedData.host.name}`}
                             />
                         </div>
                     </div>
@@ -37,27 +33,25 @@ function Card() {
                             styleContainer="collapse-bar"
                             styleBar="text-bar"
                             title="Description"
-                            text={selectedData.description} />
+                            text={selectedData.description}
+                        />
                         <CollapseMenu
                             styleContainer="collapse-bar"
                             styleBar="text-bar"
                             title="Équipements"
                             text={
                                 <ul>
-                                    {selectedData.equipments.map((equipment) => (
-                                        <li key={equipment}>
-                                            {equipment}
-                                        </li>
+                                    {selectedData.equipments.map((equipment, index) => (
+                                        <li key={index}>{equipment}</li>
                                     ))}
                                 </ul>
                             }
                         />
                     </div>
-                </div>
-
-
+                </Link>
             </div>
-        )
+        );
     }
+    return null;
 }
-export default Card
+export default Card;

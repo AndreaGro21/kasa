@@ -6,16 +6,13 @@
   height: 820px;
   margin: 2% 0;
   background: #f6f6f6;
-
   overflow-y: scroll;
-
 }
 .main-page::-webkit-scrollbar{
     display: none;
     -ms-overflow-style:none;
     scrollbar-width:none;
 }
-
 .main-container {
   display: grid;
   grid-template-columns: repeat(3, 30%);
@@ -45,4 +42,8 @@
       line-height: 142.6%;
     }
   }
+}
+link{
+  text-decoration: none;
+  list-style-type: none;
 }

@@ -7,6 +7,12 @@
 body {
   box-sizing: border-box;
   font-family: $mainFont;
+  list-style-type: none;
+}
+
+.card_details, .main-container_details{
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .nav-container {
@@ -22,7 +28,7 @@ body {
   line-height: 34.224px;
   .nav-menu {
     display: flex;
-    width: 20%;;
+    gap: 10px;
     .link {
       text-decoration: none;
       color: $mainColor;
@@ -32,12 +38,6 @@ body {
     }
   }
 }
-
-
-
-
-
-
 .error-page{
   color: $mainColor;
 
@@ -60,6 +60,7 @@ gap: 79px;
 
   &_link{
     color: $mainColor;
+  
   }
 }
 

@@ -8,6 +8,7 @@ function Apropos() {
             <Banner
                 titleBanner={""} 
                 background={BannerImg}
+                
             />
             <CollapseMenu
                 styleContainer="apropos-list"
