@@ -20,13 +20,16 @@
     opacity: 0;
     color: $mainColor;
     background: #f6f6f6;
-    padding: 15px;
-    transform: translateY(-10px);
+    padding: 25px 15px;
+   border-radius: 10px;
     display: none;
   }
   .collapse-text.visible { 
     opacity: 1;
     display: block;
+    overflow: hidden;
+    margin-top: -15px;
+    z-index: -1;
 
     ul{
       font-size: 18px;
