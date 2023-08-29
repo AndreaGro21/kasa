@@ -1,0 +1,77 @@
+
+
+.card-container {
+  margin: 0 8%;
+}
+.host-picture_title {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  color: $mainColor;
+  justify-content: flex-end;
+
+  h3 {
+    font-family: $mainFont;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0 10px 0 0;
+    width: 50%;
+    word-wrap: break-word;
+    flex: .5;
+  }
+}
+.picture-profile {
+  border-radius: 50%;
+  width: 80px;
+}
+.flex-stars-profile{
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &_title {
+    margin: 0;
+    margin-bottom: 20px;
+    align-items: center;
+    h2{
+      margin: 0;
+      color: $mainColor;
+    }
+    p{
+      margin: 10px 0;
+      color: $mainColor;
+    }
+    button {
+      border: none;
+      background: $mainColor;
+      border-radius: 10px;
+      color: white;
+      padding: 1% 6%;
+      margin: 50px 5px 10px 0;
+    }
+  }
+}
+
+.stars {
+  align-self: flex-end;
+  .fa-star {
+    color: #e3e3e3;
+    margin: 0 2px;
+    font-size: 20px;
+  }
+  .active {
+    color: $mainColor;
+  }
+}
+
+
+.flex-tag-stars{
+  display: flex;
+  justify-content: space-between;
+}

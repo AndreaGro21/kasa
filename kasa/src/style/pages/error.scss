@@ -1,0 +1,26 @@
+.error-page {
+  color: $mainColor;
+  h1 {
+    font-size: 288px;
+    margin: 0;
+    margin-top: 40px;
+  }
+  p {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  &_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 79px;
+  }
+  &_link {
+    color: $mainColor;
+  }
+
+  .error-page_link{
+    margin-bottom: 30px;
+  }
+}

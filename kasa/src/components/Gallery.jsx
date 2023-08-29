@@ -3,9 +3,8 @@ import ImageForGallery from "./ImagesForGallery";
 
 function Gallery({ Data }) {
   const arrayData = Data;
-  console.log(arrayData)
   return (
-    <div className="main-container">
+    <div className="gallery-container">
       {arrayData.map((image) => (
         <ImageForGallery key={image.id} actualArray={image} />
       ))}

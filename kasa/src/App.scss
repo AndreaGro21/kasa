@@ -1,179 +1,34 @@
-@import "./variableSass/variables.scss";
-@import "../src/pages/home.scss";
-@import "../src/pages/apropos.scss";
-@import "../src/components/footer.scss";
-
+@import "./style/variableSass/variables.scss";
+@import "../src/style/pages/error.scss";
+@import "../src/style/pages/home.scss";
+@import "../src/style/pages/apropos.scss";
+@import "../src/style/pages/card.scss";
+@import "../src/style/layout/footer.scss";
+@import "../src/style/layout/nav.scss";
+@import "../src/style/components/banner.scss";
+@import "../src/style/components/gallery.scss";
+@import "../src/style/components/slider.scss";
+@import "../src/style/components/collapse.scss";
+@import "../src/style/keyframe.scss";
 body {
+  margin: 0;
   box-sizing: border-box;
   font-family: $mainFont;
   list-style-type: none;
 }
 
-.card_details, .main-container_details{
+.card_details,
+.gallery-container_details {
   text-decoration: none;
   list-style-type: none;
 }
 
-.nav-container {
-  margin: 45px 6.5%; /* Metodo migliore?? inserisco in variabile? */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  text-align: right;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 34.224px;
-  .nav-menu {
-    display: flex;
-    gap: 10px;
-    .link {
-      text-decoration: none;
-      color: $mainColor;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-.error-page{
-  color: $mainColor;
 
-  h1{
-    font-size: 288px;
-    margin: 0;
-    margin-top:40px;
-  }
-  p{
-    font-size: 36px;
-font-style: normal;
-font-weight: 500;
-  }
-  &_text{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 79px;
-  }
-
-  &_link{
-    color: $mainColor;
-  
-  }
-}
-
-
-.main-page {
-  border-radius: 10px;
-  max-width: 1240px;
-  height: 820px;
-  margin: 2% 0;
-  background: #f6f6f6;
-  overflow-y: scroll;
-}
-.main-page::-webkit-scrollbar{
-    display: none;
-    -ms-overflow-style:none;
-    scrollbar-width:none;
-}
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 50px;
-
-  &_details {
-    width: 100%;
-    height: 340px;
-    border-radius: 10px;
-    img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-    p {
-      padding-left: 5px;
-      position: relative;
-      bottom: 20%;
-      color: #fff;
-      font-family: $mainFont;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 142.6%;
-    }
-  }
-}
-link{
+link {
   text-decoration: none;
   list-style-type: none;
 }
 
-.main-page {
-  border-radius: 10px;
-  max-width: 1240px;
-  height: 820px;
-  margin: 2% 0;
-  background: #f6f6f6;
-  overflow-y: scroll;
-}
-.main-page::-webkit-scrollbar{
-    display: none;
-    -ms-overflow-style:none;
-    scrollbar-width:none;
-}
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 50px;
 
-  &_details {
-    width: 100%;
-    height: 340px;
-    border-radius: 10px;
-    img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-    p {
-      padding-left: 5px;
-      position: relative;
-      bottom: 20%;
-      color: #fff;
-      font-family: $mainFont;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 142.6%;
-    }
-  }
-}
-link{
-  text-decoration: none;
-  list-style-type: none;
-}
 
-.stars{
- margin: 0;
- position: absolute;
- bottom: 55px;
- right: 115px;
- 
 
-  .fa-star{
-   color: #E3E3E3;
-   margin:0 5px;
-   font-size: 20px;
-  } ;
-   .active{
-  
-    color: $mainColor;
-  }
-}

@@ -1,0 +1,217 @@
+@media screen and (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-container {
+    padding: 20px;
+    margin: 0;
+    height: 46px;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      max-width: 100px;
+      height: 45px;
+    }
+    .nav-menu {
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .landing-page {
+    margin: 0 15px;
+  }
+
+  .bannerHome {
+    min-width: 320px;
+    width: 700px;
+    height: 111px;
+    padding: 0;
+    background-position: center;
+  .title-banner{
+    padding-top: 0;
+  }
+  }
+  .sliderImg .arrows img {
+    width: 24px;
+  }
+
+  .title-banner {
+    width: 200px;
+    font-size: 24px;
+    text-align: left;
+    margin: 10px;
+  }
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 0;
+    overflow: visible;
+    gap: 27px;
+    
+  }
+
+  .gallery-container_details {
+    width: 100%;
+    height: 255px;
+    img {
+      width: 100%;
+      height: 255px;
+    }
+    p{
+      bottom: 23%;
+    }
+  }
+  .landing-main{
+    margin-top: 20px;
+  }
+
+  //PAGE APROPOS
+
+  .apropos-home {
+    margin: 0 0;
+  }
+
+  .banner-apropos {
+    min-width: 220px;
+    height: 111px;
+    background-image:url("../assets/bannerAproposMobile.png");
+    background-position: center;
+    margin: 0 19px;
+opacity: 0.9;
+mix-blend-mode: darken;
+  }
+.collapse-container{
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+  .collapse-list {
+    margin: 25px 19px;
+  }
+  .title-collapse_apropos {
+    padding: 9px 15px;
+  }
+  //CARD
+  .card-container {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .card_details {
+    margin: 0;
+    padding: 0;
+  }
+  .sliderImg .numberImg {
+    top: 8rem;
+   
+  }
+  .profile-info {
+    display: block;
+    flex-direction: column;
+  }
+
+  .profile-info_title {
+    button {
+      display: inline;
+      margin: 5px 3px 0 0;
+      padding: 5px 8px;
+    }
+  }
+  .flex-stars-profile {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .locations-collapse {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    .collapse-bar {
+      width: 100%;
+    }
+  }
+ 
+
+  .stars {
+    align-self: center;
+  }
+
+  //ERROR
+  .error-page_text {
+    text-align: center;
+
+    h1 {
+      font-size: 96px;
+    }
+    p {
+      font-size: 18px;
+    }
+    a {
+      margin-bottom: 113px;
+    }
+  }
+
+  footer {
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 438px) and (min-width: 320px) {
+
+  html{
+    overflow-y: hidden;
+  }
+  .sliderImg .imgAccommodation {
+    height: 250px;
+  }
+  .sliderImg .numberImg{
+ top: 7rem;
+  }
+  .picture-profile{
+    width: 40px;
+  }
+  .host-picture_title h3 {
+    font-size: 12px;
+    width: 60%;
+  }
+
+  .title-bar{
+    font-size: 13px;
+    padding: 7px 5px;
+  }
+
+  .profile-info_title h2{
+    font-size: 18px;
+  }
+  .profile-info_title p{
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .profile-info_title button{
+    font-size: 10px;
+  }
+
+  .stars {
+    width: 100%;
+    .fa-star {
+      margin: 0 2px;
+      width: 16px;
+    }
+  }
+footer{
+  padding:0;
+  padding-bottom: 100px;
+}
+  footer p{
+    width: 40%;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .error-page_text h1{
+    margin-top: 113px;}
+}

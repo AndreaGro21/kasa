@@ -7,14 +7,12 @@ async function getData() {
       'Accept': 'application/json'
     }
   });
-
   const myJson = await response.json();
   return myJson;
 }
 
 function Data() {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     async function fetchData() {
       const newData = await getData();

@@ -1,0 +1,20 @@
+.apropos-home {
+  margin: 0 45px;
+}
+.title-collapse_apropos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: $mainColor;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover{
+    box-shadow:inset 5px 5px 26px -4px #f74949;
+    border-radius: 10px;
+      }
+}
+.collapse-list {
+  margin: 2% 10%;
+}

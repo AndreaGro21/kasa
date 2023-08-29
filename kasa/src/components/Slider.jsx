@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import arrowLeft from "../assets/arrow_left.png";
 import arrowRight from "../assets/arrow_right.png";
+import Error from "../pages/Error";
 
-function getAccommodationById(Data, id) {
-  return Data.find(item => item.id === id);
+function getAccommodationById(data, id) {
+  return data.find(item => item.id === id);
 }
-function Slider({ Data }) {
+function Slider({ data }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { logementId } = useParams();
-  const fetchedData = Data;
-  const selectedData = getAccommodationById(fetchedData, logementId);
+  const selectedData = getAccommodationById(data, logementId);
   const currentImage = selectedData?.pictures[currentIndex];
   const slideLeft = () => {
     setCurrentIndex(currentIndex === 0 ? selectedData.pictures.length - 1 : currentIndex - 1);
@@ -20,7 +20,7 @@ function Slider({ Data }) {
   };
 
   if (!selectedData) {
-    return <div>No data found for the provided logementId</div>;
+    return <Error />
   }
   return (
     <div className="sliderImg">
@@ -36,7 +36,6 @@ function Slider({ Data }) {
             src={arrowLeft}
             alt="Previous"
           />
-
           <img
             onClick={slideRight}
             src={arrowRight}

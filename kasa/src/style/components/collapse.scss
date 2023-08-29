@@ -1,0 +1,53 @@
+.locations-collapse {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.collapse-bar {
+  width: 50%;
+}
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: $mainColor;
+  color: #fff;
+  border-radius: 10px;
+  align-items: center;
+  
+  &:hover{
+    box-shadow:inset 5px 5px 26px -4px #f74949;
+    border-radius: 10px;
+      }
+}
+.collapse-text {
+  position: relative;
+  opacity: 0;
+  color: $mainColor;
+  background: #f6f6f6;
+  padding: 25px 10px;
+  border-radius: 10px;
+  display: none;
+
+}
+.collapse-text.visible {
+  opacity: 1;
+  display: block;
+  overflow: hidden;
+  margin-top: -15px;
+  z-index: -1;
+
+
+  ul {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, } from 'react-router-dom';
 import MainRoute from './components/Router';
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import Data from "./components/Data";
+import Data from "./Data";
 import "./App.scss"
 function App() {
   return (
@@ -14,5 +14,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

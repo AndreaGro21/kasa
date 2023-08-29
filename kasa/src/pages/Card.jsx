@@ -1,15 +1,14 @@
 import React from "react";
-import { useParams, Link } from 'react-router-dom';
-import CollapseMenu from "./CollapseMenu";
-import Slider from "./Slider";
+import { useParams } from 'react-router-dom';
+import CollapseMenu from "../components/CollapseMenu";
+import Slider from "../components/Slider";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faStar } from '@fortawesome/free-solid-svg-icons'; 
-import Error from "../pages/Error";
+import Error from "./Error";
 function Card({ Data }) {
     const { logementId } = useParams();
     const selectedData = Data.find(item => item.id === logementId);
     const starsArray = new Array(1,2,3,4,5)
-    const stars = starsArray.map((star) =>(<i key={star}className="fa-solid fa-star"></i> ))
     if (selectedData) {
         const stars = starsArray.map(star => (
             <FontAwesomeIcon
@@ -20,10 +19,13 @@ function Card({ Data }) {
         ));
         return (
             <div className="card-container" key={logementId}>
-                <Link to={`/logements/${logementId}`} className="card_details" >
+                <div
+                style={{ cursor: 'unset' }}
+                to={`/logements/${logementId}`} 
+                className="card_details" >
                     <Slider
                         imagesList={selectedData.images}
-                        Data={Data}
+                        data={Data}
                     />
                     <div className="profile-info">
                         <div className="profile-info_title">
@@ -33,29 +35,30 @@ function Card({ Data }) {
                             {selectedData.tags.map((tag, index) => (
                                 <button key={index}>{tag}</button>
                             ))}
-                            
                         </div>
                         
-                        <div className="profile-container">
-                            <h5>{selectedData.host.name}</h5>
-                            <img
-                                src={selectedData.host.picture}
-                                className="picture-profile"
-                                alt={`photo of: ${selectedData.host.name}`}
-                            />
+                        <div className="flex-stars-profile">
+                            <div className="host-picture_title">
+                                <h3>{selectedData.host.name}</h3>
+                                <img
+                                    src={selectedData.host.picture}
+                                    className="picture-profile"
+                                    alt={`photo of: ${selectedData.host.name}`}
+                                />
+                            </div>
                             <div className="stars">{stars}</div>
                         </div>
                     </div>
                     <div className="locations-collapse">
                         <CollapseMenu
                             styleContainer="collapse-bar"
-                            styleBar="text-bar"
+                            styleBar="title-bar"
                             title="Description"
                             text={selectedData.description}
                         />
                         <CollapseMenu
                             styleContainer="collapse-bar"
-                            styleBar="text-bar"
+                            styleBar="title-bar"
                             title="Équipements"
                             text={
                                 <ul>
@@ -66,11 +69,13 @@ function Card({ Data }) {
                             }
                         />
                     </div>
-                </Link>
+                </div>
             </div>
         );
     }
-else{return(Error())}
+    else{
+        return(Error())
+    }
 
 
 }
