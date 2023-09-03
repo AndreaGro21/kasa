@@ -3,8 +3,6 @@ import Banner from "../components/Banner"
 import Main from "../components/Main"
 import BannerimgAcc from "../assets/bannerhome.png"
 
-
-
 function Home() {
     return (
         <div className="landing-page">

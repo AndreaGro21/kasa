@@ -29,10 +29,11 @@
     height: 111px;
     padding: 0;
     background-position: center;
-  .title-banner{
-    padding-top: 0;
+    .title-banner{
+      padding-top: 0;
+    }
   }
-  }
+ 
   .sliderImg .arrows img {
     width: 24px;
   }
@@ -50,7 +51,6 @@
     padding: 0;
     overflow: visible;
     gap: 27px;
-    
   }
 
   .gallery-container_details {
@@ -60,11 +60,11 @@
       width: 100%;
       height: 255px;
     }
-    p{
+    p {
       bottom: 23%;
     }
   }
-  .landing-main{
+  .landing-main {
     margin-top: 20px;
   }
 
@@ -77,16 +77,16 @@
   .banner-apropos {
     min-width: 220px;
     height: 111px;
-    background-image:url("../assets/bannerAproposMobile.png");
+    background-image: url("../assets/bannerAproposMobile.png");
     background-position: center;
     margin: 0 19px;
-opacity: 0.9;
-mix-blend-mode: darken;
+    opacity: 0.9;
+    mix-blend-mode: darken;
   }
-.collapse-container{
-  margin-top: 10%;
-  margin-bottom: 20%;
-}
+  .collapse-container {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
   .collapse-list {
     margin: 25px 19px;
   }
@@ -105,7 +105,6 @@ mix-blend-mode: darken;
   }
   .sliderImg .numberImg {
     top: 8rem;
-   
   }
   .profile-info {
     display: block;
@@ -117,6 +116,7 @@ mix-blend-mode: darken;
       display: inline;
       margin: 5px 3px 0 0;
       padding: 5px 8px;
+   
     }
   }
   .flex-stars-profile {
@@ -132,7 +132,6 @@ mix-blend-mode: darken;
       width: 100%;
     }
   }
- 
 
   .stars {
     align-self: center;
@@ -160,18 +159,33 @@ mix-blend-mode: darken;
   }
 }
 
-@media screen and (max-width: 438px) and (min-width: 320px) {
 
-  html{
-    overflow-y: hidden;
+
+@media screen and (min-width: 768px) and (max-width: 1018px){
+  .title-banner{
+    margin-top: 10px;
+    padding-top: 0%;
   }
+
+  .gallery-container{
+    padding: 60px 40px;
+  }
+  .gallery-container_details p{
+bottom: 23%;
+font-size: 17px;
+margin-right: 0;
+line-height: 1;
+  }
+}
+
+@media screen and (max-width: 438px) and (min-width: 320px) {
   .sliderImg .imgAccommodation {
     height: 250px;
   }
-  .sliderImg .numberImg{
- top: 7rem;
+  .sliderImg .numberImg {
+    top: 7rem;
   }
-  .picture-profile{
+  .picture-profile {
     width: 40px;
   }
   .host-picture_title h3 {
@@ -179,20 +193,21 @@ mix-blend-mode: darken;
     width: 60%;
   }
 
-  .title-bar{
+  .title-bar {
     font-size: 13px;
     padding: 7px 5px;
   }
 
-  .profile-info_title h2{
+  .profile-info_title h2 {
     font-size: 18px;
   }
-  .profile-info_title p{
+  .profile-info_title p {
     font-size: 14px;
     margin: 5px 0;
   }
-  .profile-info_title button{
+  .profile-info_title button {
     font-size: 10px;
+    overflow: visible;
   }
 
   .stars {
@@ -202,16 +217,17 @@ mix-blend-mode: darken;
       width: 16px;
     }
   }
-footer{
-  padding:0;
-  padding-bottom: 100px;
-}
-  footer p{
+  footer {
+    padding: 0;
+    padding-bottom: 100px;
+  }
+  footer p {
     width: 40%;
     word-wrap: break-word;
     text-align: center;
   }
 
-  .error-page_text h1{
-    margin-top: 113px;}
+  .error-page_text h1 {
+    margin-top: 113px;
+  }
 }

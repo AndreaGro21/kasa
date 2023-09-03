@@ -45,7 +45,6 @@ function Slider({ data }) {
             {currentIndex + 1}/{selectedData.pictures.length}
           </p>
         </div>
-
       )}
     </div>
   );

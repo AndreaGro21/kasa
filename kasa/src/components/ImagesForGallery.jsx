@@ -6,8 +6,7 @@ function ImageForGallery({ actualArray }) {
     <Link
       to={`/logements/${actualArray.id}`}
       key={actualArray.id}
-      className="gallery-container_details"
-    >
+      className="gallery-container_details">
       <img
         src={actualArray.cover}
         alt={actualArray.title}
