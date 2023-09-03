@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 
 function CollapseMenu({ title, text, styleContainer, styleBar }) {
   const [isOpenArr, setIsOpenArr] = useState(false);
-  const showText = useRef(null)
   const handleToggle = () => {
     setIsOpenArr(!isOpenArr)
   }
@@ -12,7 +11,7 @@ function CollapseMenu({ title, text, styleContainer, styleBar }) {
         {title}
         <i className={`fa-solid fa-chevron-${isOpenArr ? 'down' : 'up'}`}></i>
       </div>
-      <div ref={showText} className={`collapse-text ${isOpenArr ? 'visible' : ''}`}>
+      <div  className={`collapse-text ${isOpenArr ? 'visible' : ''}`}>
           {text}
       </div>
     </div>
