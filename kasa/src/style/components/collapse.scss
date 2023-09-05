@@ -5,12 +5,12 @@
   margin-top: 10px;
   margin-bottom: 50px;
   cursor: pointer;
+ 
 }
 .collapse-bar {
   width: 50%;
 }
-.collapse-bar .collapse-text.visible{
-  
+.collapse-bar .collapse-text.visible {
   cursor: default;
 }
 .title-bar {
@@ -21,12 +21,10 @@
   color: #fff;
   border-radius: 10px;
   align-items: center;
- 
-  
-  &:hover{
-    box-shadow:inset 5px 5px 26px -4px #f74949;
+  &:hover {
+    box-shadow: inset 5px 5px 26px -4px #f74949;
     border-radius: 10px;
-      }
+  }
 }
 .collapse-text {
   position: relative;
@@ -36,7 +34,7 @@
   padding: 25px 10px;
   border-radius: 10px;
   display: none;
- 
+  animation: slowBar .8 both;
 }
 
 .collapse-text.visible {
@@ -45,9 +43,7 @@
   overflow: hidden;
   margin-top: -15px;
   z-index: -1;
-
-
-
+  animation: slowBar 0.8s both;
   ul {
     font-size: 18px;
     font-style: normal;
@@ -56,5 +52,24 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
   }
 }
+@keyframes slowBar {
+  0% {
+      transform: translateY(-80px);
+      transform-origin: top;
+      opacity: 0;
+  }
+  10% {
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      transform-origin: top;
+      opacity: 1;
+  }
+}
+
+
+

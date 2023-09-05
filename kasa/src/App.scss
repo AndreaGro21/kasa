@@ -9,7 +9,7 @@
 @import "../src/style/components/gallery.scss";
 @import "../src/style/components/slider.scss";
 @import "../src/style/components/collapse.scss";
-@import "../src/style/keyframe.scss";
+@import "../src/style/media-screen.scss";
 body {
   margin: 0;
   box-sizing: border-box;
@@ -22,8 +22,6 @@ body {
   text-decoration: none;
   list-style-type: none;
 }
-
-
 link {
   text-decoration: none;
   list-style-type: none;

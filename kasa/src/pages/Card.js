@@ -21,7 +21,6 @@ function Card({ Data }) {
             <div className="card-container" key={logementId}>
                 <div
                 style={{ cursor: 'unset' }}
-                to={`/logements/${logementId}`} 
                 className="card_details" >
                     <Slider
                         imagesList={selectedData.images}
